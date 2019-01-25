@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JNU_User_Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60206a4c-9ffd-4c3f-8175-147cbc7a2b61">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test_db"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="id" class="java.lang.Integer"/>
+	<parameter name="student_id" class="java.lang.String"/>
+	<parameter name="name" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT ID, NAME, BIRTHDAY, STUDENT_ID, MAJOR, GRADUATION_DATE
+FROM JEJU.STUDENT 
+WHERE STUDENT_ID = $P{student_id} 
+OR NAME = $P{name} OR ID = $P{id}]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="BIRTHDAY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BIRTHDAY"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="STUDENT_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="STUDENT_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="MAJOR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MAJOR"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="GRADUATION_DATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="GRADUATION_DATE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="70" y="20" width="410" height="40" uuid="8cefe611-cee7-48ef-a0fa-47026bf41300"/>
+				<textElement textAlignment="Center">
+					<font fontName="맑은 고딕" size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA["졸 업 증 명 서"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="1" splitType="Stretch">
+			<staticText>
+				<reportElement x="127" y="0" width="60" height="1" uuid="5b0fed14-b6aa-44c5-84b6-ec9deb9be424">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b288738d-02c2-4302-8161-5c7f0e7487c2"/>
+				</reportElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="0" width="60" height="1" uuid="5f3ff10b-338a-4fba-be5e-d857d24fa50f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0a3f5bdd-a1f4-4257-83e6-008e27b5cbcd"/>
+				</reportElement>
+				<text><![CDATA[BIRTHDAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="0" width="60" height="1" uuid="315b30fb-61a7-4200-8fdd-c62389aaacd9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9847aab6-8ba8-464a-8949-45eb6cd57c18"/>
+				</reportElement>
+				<text><![CDATA[STUDENT_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="307" y="0" width="60" height="1" uuid="dc29235b-16bc-4264-afcb-59a7ede57d66">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="547013d1-fe33-4690-a05f-9bf6d2c94a5a"/>
+				</reportElement>
+				<text><![CDATA[MAJOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="0" width="60" height="1" uuid="c0f8207a-6fd1-43fe-add6-de5add4c8091">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="450a938d-f8c1-408f-9087-dae0718f9b64"/>
+				</reportElement>
+				<text><![CDATA[GRADUATION_DATE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="299" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement positionType="FixRelativeToBottom" mode="Transparent" x="127" y="0" width="300" height="299" uuid="c73162b2-7fd9-420a-84ab-db984acdf689"/>
+				<imageExpression><![CDATA["/Users/iminhyeog/JaspersoftWorkspace/MyReports/jeju_mark.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="80" y="0" width="80" height="30" uuid="40d35c5b-4a3a-4a8e-a9b2-4d54a58f9ce1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<text><![CDATA[성	    명]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="50" width="80" height="30" uuid="50f5988e-8ed2-483b-9cbc-dd7e5e412f5c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<text><![CDATA[생  년  월  일]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="100" width="80" height="30" uuid="36e140fe-a676-433d-a611-397f6427dea1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<text><![CDATA[학	    번]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="150" width="80" height="30" uuid="180e3872-e355-4df3-a2cc-11dcc1df60a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<text><![CDATA[소	    속]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="200" width="80" height="30" uuid="de1fb50d-8ab6-42a1-b7cc-670fab0a5bc4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<text><![CDATA[졸    업    일]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="186" y="0" width="155" height="30" uuid="92b01e19-595c-4b4c-a848-5c6a1d844a57">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b288738d-02c2-4302-8161-5c7f0e7487c2"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="50" width="155" height="30" uuid="4318c5a2-4e81-46fd-bcd2-42dfb0fa3a7d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0a3f5bdd-a1f4-4257-83e6-008e27b5cbcd"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BIRTHDAY}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="100" width="155" height="30" uuid="5553c24f-b85d-4f76-af43-1a83ba8225dc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9847aab6-8ba8-464a-8949-45eb6cd57c18"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STUDENT_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="150" width="264" height="30" uuid="c1e28e1b-ba60-4e7c-925d-4e005a925958">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="547013d1-fe33-4690-a05f-9bf6d2c94a5a"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MAJOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="200" width="155" height="30" uuid="f2f8b439-d07a-4fd1-a2f2-cf99198f30ff">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="450a938d-f8c1-408f-9087-dae0718f9b64"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GRADUATION_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="127" y="0" width="299" height="30" uuid="83e61560-f1be-4fc7-aefe-da1fdf1fcb98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="16"/>
+				</textElement>
+				<text><![CDATA[위의 사실을 증명합니다.]]></text>
+			</staticText>
+			<textField pattern="YYYY년 MM월 dd일">
+				<reportElement x="180" y="38" width="200" height="30" uuid="ed4d1350-433d-479e-8136-9d62569dc40f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="540" height="56" uuid="10f1e798-7fd9-4cb6-a0f1-8b148a8ea4d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="맑은 고딕" size="29"/>
+				</textElement>
+				<text><![CDATA[제    주    대    학    교    총   장]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Stretch"/>
+	</summary>
+</jasperReport>
