@@ -22,7 +22,7 @@ public class StudentController {
 
     @GetMapping("/grd")
     public void grdPdf(HttpServletResponse response) throws Exception {
-        dataSource = getDataSource(studentService.studentTest());
+        dataSource = getDataSource(studentService.studentFindAll());
         reportService.exportReportToPdf(response, "JNU_User_Report1", dataSource);
     }
 }

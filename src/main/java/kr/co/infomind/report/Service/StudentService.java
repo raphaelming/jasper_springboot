@@ -16,7 +16,7 @@ public class StudentService {
     private final StudentRepository studentRepository;
 
 
-    public Collection studentTest() {
+    public List<Map<String, Object>> studentFindAll() {
         List<Map<String, Object>> result = new ArrayList<Map<String, Object>>();
         for (Student student : studentRepository.findAll()) {
             Map<String, Object> item = new HashMap<String, Object>();
@@ -31,12 +31,4 @@ public class StudentService {
         return result;
     }
 
-//    public Student get(Integer id) {
-//         studentRepository.findById(1);
-//    }
-
-    public Collection getStudentInfo(Integer id) {
-        Collection result = (Collection) studentRepository.findById(id).get();
-        return result;
-    }
 }
